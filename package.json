@@ -13,7 +13,8 @@
     "cy:open": "cypress open",
     "test:e2e": "start-server-and-test dev http://localhost:3000 cy:open",
     "test:e2e:run": "start-server-and-test dev http://localhost:3000 cy:run",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.0",
@@ -34,9 +35,11 @@
     "typescript": "^4.2.3"
   },
   "prettier": {
-    "arrowParens": "always",
+    "semi": false,
+    "arrowParens": "avoid",
     "singleQuote": true,
     "tabWidth": 2,
-    "trailingComma": "none"
+    "printWidth": 80,
+    "bracketSpacing": false
   }
 }
