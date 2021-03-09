@@ -14,12 +14,13 @@
     "test:e2e": "start-server-and-test dev http://localhost:3000 cy:open",
     "test:e2e:run": "start-server-and-test dev http://localhost:3000 cy:run",
     "type-check": "tsc --pretty --noEmit",
+    "type-check:cypress": "tsc --project cypress/tsconfig.json --pretty --noEmit",
     "format": "prettier --write ."
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn run type-check"
+      "pre-push": "yarn run type-check && yarn run type-check:cypress"
     }
   },
   "lint-staged": {
