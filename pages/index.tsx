@@ -1,5 +1,11 @@
+import {Layout} from '@/components/Layout'
+
 export const Home = (): JSX.Element => {
-  return <div>Home Page</div>
+  return (
+    <Layout>
+      <p>Home Page</p>
+    </Layout>
+  )
 }
 
 export default Home

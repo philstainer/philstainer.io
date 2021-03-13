@@ -50,7 +50,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#ffffff" />
         </Head>
 
-        <body className="bg-white dark:bg-black text-black dark:text-white">
+        <body className="text-black bg-white dark:bg-gray-900 dark:text-gray-200">
           <Main />
           <NextScript />
         </body>

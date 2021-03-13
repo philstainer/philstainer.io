@@ -1,5 +1,6 @@
 module.exports = {
   roots: ['<rootDir>'],
+  setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
   testPathIgnorePatterns: [
     '<rootDir>[/\\\\](node_modules|.next|cypress)[/\\\\]',
@@ -15,7 +16,6 @@ module.exports = {
   ],
   moduleNameMapper: {
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
-    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
     '@/__tests__/(.*)': ['<rootDir>/__tests__/$1'],
     '@/pages/(.*)': ['<rootDir>/pages/$1'],
     '@/components/(.*)': ['<rootDir>/components/$1'],
