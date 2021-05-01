@@ -1,15 +1,10 @@
 import Link from 'next/link'
-import {ThemeButton} from '@/components/ThemeButton'
 
-const items = [
-  {name: 'Blog', href: '/blog'},
-]
+const items = [{name: 'Blog', href: '/blog'}]
 
 export const Nav = (): JSX.Element => {
   return (
-    <nav className="sticky top-0 z-10 flex items-center justify-between w-full max-w-5xl p-6 mx-auto my-0 bg-white select-none dark:bg-gray-900 md:my-2">
-      <ThemeButton />
-
+    <nav className="sticky top-0 z-10 flex items-center justify-end w-full max-w-5xl p-6 mx-auto my-0 bg-white select-none dark:bg-gray-900 md:my-2">
       <div className="space-x-2">
         {items.map(({name, href}) => (
           <Link key={name} href={href}>
