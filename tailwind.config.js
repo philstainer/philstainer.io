@@ -13,28 +13,30 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: theme('colors.indigo.500'),
+              color: theme('colors.indigo.600'),
               '&:hover': {
-                color: theme('colors.indigo.700')
+                color: theme('colors.indigo.900'),
               },
             },
-          }
+          },
         },
-       dark: {
-         css: {
-           a: {
-             color: theme('colors.indigo.400'),
-             '&:hover': {
-               color: theme('colors.indigo.600')
-             },
-           },
-         }
-       },
-      })
+        dark: {
+          css: {
+            a: {
+              color: theme('colors.indigo.400'),
+              '&:hover': {
+                color: theme('colors.indigo.300'),
+              },
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
-    typography: ['dark']
+    extend: {
+      typography: ['dark'],
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 }
