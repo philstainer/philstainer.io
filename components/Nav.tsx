@@ -11,7 +11,7 @@ export const Nav = (): JSX.Element => {
       <div className="space-x-2">
         {pages.map(({name, href}) => (
           <Link key={name} href={href}>
-            <a className="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition rounded sm:p-3 focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-gray-200">
+            <a className="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors rounded sm:p-3 focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-gray-200">
               {name}
             </a>
           </Link>
