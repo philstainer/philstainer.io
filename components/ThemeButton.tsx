@@ -3,12 +3,12 @@ import {useTheme} from 'next-themes'
 
 export const ThemeButton = (): JSX.Element => {
   const [mounted, setMounted] = useState(false)
-  const {theme, setTheme} = useTheme()
+  const {setTheme, resolvedTheme} = useTheme()
 
   // When mounted on client
   useEffect(() => setMounted(true), [])
 
-  const isDarkMode = theme === 'dark'
+  const isDarkMode = resolvedTheme === 'dark'
 
   return (
     <button

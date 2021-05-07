@@ -40,7 +40,7 @@ export const Project = ({
         {description}
       </p>
 
-      <div className="flex gap-2">
+      <div className="flex space-x-2">
         <a
           href={href}
           aria-label="View Site"
