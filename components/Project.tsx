@@ -1,4 +1,4 @@
-export interface Props {
+export type Props = {
   title: string
   description: string
   href: string

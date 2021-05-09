@@ -5,7 +5,7 @@ import {Project} from '@/components/Project'
 export const Home = (): JSX.Element => {
   return (
     <Layout>
-      <div className="flex flex-col justify-center items-start w-full max-w-3xl mx-auto mb-16">
+      <div className="flex flex-col justify-center items-start w-full max-w-3xl mx-auto">
         <section className="mb-16 md:mb-28">
           <div className="font-light text-gray-600 dark:text-gray-300 mb-3">
             Hi, I’m
