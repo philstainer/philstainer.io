@@ -1,6 +1,7 @@
 import {ReactNode} from 'react'
 import {Nav} from '@/components/Nav'
 import {ThemeButton} from '@/components/ThemeButton'
+import {Footer} from '@/components/Footer'
 
 type Props = {
   children: ReactNode
@@ -12,7 +13,11 @@ export const Layout = ({children}: Props): JSX.Element => {
       <ThemeButton />
       <Nav />
 
-      <main>{children}</main>
+      <main className="flex flex-col justify-center bg-white dark:bg-gray-900 px-6 mt-10 md:mt-20">
+        {children}
+
+        <Footer />
+      </main>
     </div>
   )
 }
