@@ -10,7 +10,7 @@ export const Home = (): JSX.Element => {
           <div className="font-light text-gray-600 dark:text-gray-300 mb-3">
             Hi, I’m
           </div>
-          <h1 className="font-bold text-4xl md:text-6xl mb-4 text-gray-900 dark:text-white">
+          <h1 className="font-bold text-4xl md:text-6xl mb-4 text-gray-900 dark:text-gray-100">
             Phil Stainer
           </h1>
           <h2 className="leading-7 font-light text-gray-600 dark:text-gray-300 mb-5">
@@ -26,7 +26,7 @@ export const Home = (): JSX.Element => {
         </section>
 
         <section className="w-full">
-          <h3 className="font-bold text-2xl md:text-4xl mb-8 md:mb-12 text-gray-900 dark:text-white">
+          <h3 className="font-bold text-2xl md:text-4xl mb-8 md:mb-12 text-gray-900 dark:text-gray-100">
             Projects
           </h3>
 
