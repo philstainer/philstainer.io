@@ -7,7 +7,7 @@ export const pages = [
 
 export const Nav = (): JSX.Element => {
   return (
-    <nav className="sticky top-0 z-10 flex items-center justify-end w-full max-w-5xl p-6 mx-auto my-0 bg-white select-none dark:bg-gray-900 md:my-2">
+    <nav className="sticky top-0 z-10 flex items-center justify-end w-full max-w-5xl p-6 mx-auto my-0 bg-white bg-opacity-95 dark:bg-gray-900 dark:bg-opacity-95 select-none md:my-2">
       <div className="space-x-2">
         {pages.map(({name, href}) => (
           <Link key={name} href={href}>
