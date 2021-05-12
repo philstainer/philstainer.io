@@ -15,7 +15,7 @@ export const Blog = ({posts}: Props): JSX.Element => {
   return (
     <Layout>
       <div className="flex flex-col justify-center items-start w-full max-w-3xl mx-auto">
-        <h1 className="font-bold text-2xl md:text-4xl mb-8 md:mb-12 text-gray-900 dark:text-gray-100">
+        <h1 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-gray-100">
           Blog
         </h1>
 

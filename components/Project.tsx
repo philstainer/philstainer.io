@@ -14,9 +14,9 @@ export const Project = ({
   tags,
 }: Props): JSX.Element => {
   return (
-    <div className="block mb-7 space-y-3">
+    <div className="block mb-7 space-y-2">
       <div className="flex justify-between items-center text-gray-900 dark:text-gray-100">
-        <h4 className="text-xl md:text-2xl font-bold tracking-tight">
+        <h4 className="text-xl md:text-2xl tracking-tight">
           <span>{title}</span>
         </h4>
       </div>

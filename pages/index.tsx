@@ -40,10 +40,10 @@ export const Home = ({posts}: Props): JSX.Element => {
         </section>
 
         {latestPosts.length > 0 && (
-          <section className="mb-16 md:mb-20 w-full">
+          <section className="mb-10 w-full">
             <h3
               id="posts"
-              className="font-bold text-2xl md:text-4xl mb-8 md:mb-12 text-gray-900 dark:text-gray-100"
+              className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-gray-100"
             >
               Latest Posts
             </h3>
@@ -57,7 +57,7 @@ export const Home = ({posts}: Props): JSX.Element => {
         <section className="w-full">
           <h3
             id="projects"
-            className="font-bold text-2xl md:text-4xl mb-8 md:mb-12 text-gray-900 dark:text-gray-100"
+            className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-gray-100"
           >
             Projects
           </h3>
