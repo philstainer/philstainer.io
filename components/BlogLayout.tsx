@@ -22,11 +22,11 @@ export const BlogLayout = ({children, frontMatter}: Props): JSX.Element => {
   return (
     <Layout>
       <article className="flex flex-col justify-center items-start w-full max-w-3xl mx-auto">
-        <h1 className="font-bold text-3xl md:text-5xl mb-4 text-gray-900 dark:text-gray-100">
+        <h1 className="font-bold text-3xl md:text-5xl mb-5 text-gray-900 dark:text-gray-100">
           {frontMatter.title}
         </h1>
 
-        <div className="flex justify-between items-start w-full text-xs">
+        <div className="flex justify-between items-start w-full text-sm font-light">
           <p className="text-gray-600 dark:text-gray-300">
             Phil Stainer -{' '}
             {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
@@ -41,7 +41,7 @@ export const BlogLayout = ({children, frontMatter}: Props): JSX.Element => {
           {children}
         </div>
 
-        <div className="w-full flex justify-center text-xs text-gray-600 dark:text-gray-300 mt-5 space-x-1">
+        <div className="w-full flex justify-center text-sm text-gray-600 dark:text-gray-300 mt-5 space-x-1">
           <a
             href={discussUrl(frontMatter.slug)}
             target="_blank"
