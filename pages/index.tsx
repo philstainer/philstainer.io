@@ -1,12 +1,26 @@
 import Link from 'next/link'
 import {Layout} from '@/components/Layout'
 import {Project} from '@/components/Project'
+import {getFilesMatter, Post} from '@/lib/mdx'
+import {GetStaticProps} from 'next'
+import {BlogPost} from '@/components/BlogPost'
 
-export const Home = (): JSX.Element => {
+type Props = {
+  posts: Post[]
+}
+
+export const Home = ({posts}: Props): JSX.Element => {
+  const latestPosts = posts
+    .sort(
+      (a, b) =>
+        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    )
+    .slice(0, 3)
+
   return (
     <Layout>
       <div className="flex flex-col justify-center items-start w-full max-w-3xl mx-auto">
-        <section className="mb-16 md:mb-28">
+        <section className="mb-16 md:mb-20">
           <div className="font-light text-gray-600 dark:text-gray-300 mb-3">
             Hi, I’m
           </div>
@@ -25,8 +39,26 @@ export const Home = (): JSX.Element => {
           </p>
         </section>
 
+        {latestPosts.length > 0 && (
+          <section className="mb-16 md:mb-20 w-full">
+            <h3
+              id="posts"
+              className="font-bold text-2xl md:text-4xl mb-8 md:mb-12 text-gray-900 dark:text-gray-100"
+            >
+              Latest Posts
+            </h3>
+
+            {latestPosts.map(post => (
+              <BlogPost key={post.slug} {...post} />
+            ))}
+          </section>
+        )}
+
         <section className="w-full">
-          <h3 className="font-bold text-2xl md:text-4xl mb-8 md:mb-12 text-gray-900 dark:text-gray-100">
+          <h3
+            id="projects"
+            className="font-bold text-2xl md:text-4xl mb-8 md:mb-12 text-gray-900 dark:text-gray-100"
+          >
             Projects
           </h3>
 
@@ -49,6 +81,12 @@ export const Home = (): JSX.Element => {
       </div>
     </Layout>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = await getFilesMatter('posts')
+
+  return {props: {posts}}
 }
 
 export default Home

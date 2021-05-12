@@ -12,7 +12,7 @@ export const BlogPost = ({
 }: Post): JSX.Element => {
   return (
     <Link href={`/blog/${slug}`}>
-      <a className="w-full mb-5">
+      <a className="flex w-full mb-5">
         <div className="space-y-2 text-gray-900 dark:text-gray-100">
           <h4 className="text-xl md:text-2xl font-bold tracking-tight">
             <span>{title}</span>
