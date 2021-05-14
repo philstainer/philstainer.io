@@ -47,7 +47,7 @@ export const Project = ({
           title="View Site"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-gray-200 transition p-2"
+          className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-gray-200 transition p-2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ export const Project = ({
             title="View Source Code"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-gray-200 transition p-2"
+            className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-gray-200 transition p-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
