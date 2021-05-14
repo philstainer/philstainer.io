@@ -20,7 +20,13 @@ const discussUrl = (slug: GenerateUrl): string =>
 
 export const BlogLayout = ({children, frontMatter}: Props): JSX.Element => {
   return (
-    <Layout>
+    <Layout
+      title={`${frontMatter.title} - Phil Stainer`}
+      description={frontMatter.summary}
+      image={`https://philstainer.io${frontMatter.image}`}
+      date={new Date(frontMatter.publishedAt).toISOString()}
+      type="article"
+    >
       <article className="flex flex-col justify-center items-start w-full max-w-3xl mx-auto">
         <h1 className="font-bold text-3xl md:text-5xl mb-5 text-gray-900 dark:text-gray-100">
           {frontMatter.title}

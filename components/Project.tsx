@@ -28,7 +28,7 @@ export const Project = ({
             <div
               key={tag}
               data-testid="tag"
-              className="text-white bg-green-500 dark:bg-green-600 border border-green-300 rounded-sm py-0.5 px-1"
+              className="text-xs text-green-800 dark:text-green-100 bg-green-100 dark:bg-green-800 rounded-full py-1 px-2.5"
             >
               {tag}
             </div>
