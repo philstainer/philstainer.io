@@ -1,5 +1,7 @@
+jest.mock('next/router', () => ({useRouter: () => ({asPath: ''})}))
+
 import {BlogLayout} from '@/components/BlogLayout'
-import {render, screen, within} from '@/__tests__/testUtils'
+import {render, screen} from '@/__tests__/testUtils'
 
 test('should render blog layout', () => {
   const frontMatter = {
@@ -19,9 +21,8 @@ test('should render blog layout', () => {
   )
 
   const title = screen.getByRole('heading', {name: frontMatter.title})
-  const author = within(screen.getByRole('article')).getByText(/phil stainer/i)
   const date = screen.getByText(/january 01, 2021/i)
-  const readingTime = screen.getByText(frontMatter.readingTime.text)
+  const readingTime = screen.getByText(/5 min read/i)
   const children = screen.getByText(/blog content/i)
   const discussUrl = screen.getByRole('link', {
     name: /discuss on twitter/i,
@@ -31,7 +32,6 @@ test('should render blog layout', () => {
   }) as HTMLAnchorElement
 
   expect(title).toBeInTheDocument()
-  expect(author).toBeInTheDocument()
   expect(date).toBeInTheDocument()
   expect(readingTime).toBeInTheDocument()
   expect(children).toBeInTheDocument()

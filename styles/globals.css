@@ -31,11 +31,11 @@ html.dark img {
 }
 
 .prose pre {
-  @apply bg-gray-50 border border-gray-200 dark:border-gray-700 dark:bg-gray-900;
+  @apply bg-gray-50 border border-gray-200 dark:border-gray-700 dark:bg-gray-800;
 }
 
 .prose code {
-  @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-md bg-gray-100 dark:bg-gray-900;
+  @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-md bg-gray-100 dark:bg-gray-800;
 }
 
 .prose img {
@@ -126,4 +126,17 @@ pre {
 
 .mdx-marker {
   @apply block -mx-4 px-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-blue-500;
+}
+
+.fade-in {
+  animation: animation-fade-in 0.3s;
+}
+
+@keyframes animation-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

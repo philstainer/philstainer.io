@@ -1,3 +1,5 @@
+jest.mock('next/router', () => ({useRouter: () => ({asPath: ''})}))
+
 import {Home} from '@/pages/index'
 import {render, screen} from '@/__tests__/testUtils'
 

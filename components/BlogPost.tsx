@@ -18,12 +18,12 @@ export const BlogPost = ({
             <span>{title}</span>
           </h4>
 
-          <p className="font-light">{summary}</p>
-
-          <p className="text-xs font-light leading-5 text-gray-600 dark:text-gray-300">
+          <p className="text-xs leading-5 text-gray-600 dark:text-gray-300">
             {format(parseISO(publishedAt), 'MMMM dd, yyyy')} -{' '}
             {readingTime.text}
           </p>
+
+          <p className="font-light">{summary}</p>
         </div>
       </a>
     </Link>

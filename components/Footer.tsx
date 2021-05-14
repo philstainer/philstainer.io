@@ -1,10 +1,7 @@
-import Link from 'next/link'
-import {pages} from '@/components/Nav'
-
 export const Footer = (): JSX.Element => {
   return (
     <footer className="flex flex-col justify-center items-center max-w-3xl mx-auto w-full my-10">
-      <hr className="w-full border border-gray-200 dark:border-gray-800 mb-8" />
+      <hr className="w-full border border-gray-200 dark:border-gray-800 mb-10" />
 
       <div className="flex flex-col md:flex-row items-center md:justify-between self-stretch bg-purple-100 dark:bg-gray-900 rounded-2xl border border-purple-300 p-6 space-y-3 md:space-y-0">
         <div className="text-sm text-gray-600 dark:text-gray-300">

@@ -32,22 +32,16 @@ export const BlogLayout = ({children, frontMatter}: Props): JSX.Element => {
           {frontMatter.title}
         </h1>
 
-        <div className="flex justify-between items-start w-full text-sm font-light">
-          <p className="text-gray-600 dark:text-gray-300">
-            Phil Stainer -{' '}
-            {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
-          </p>
-
-          <p className="text-gray-600 dark:text-gray-300">
-            {frontMatter.readingTime.text}
-          </p>
-        </div>
+        <p className="text-sm font-light text-gray-600 dark:text-gray-300">
+          {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')} -{' '}
+          {frontMatter.readingTime.text}
+        </p>
 
         <div className="prose dark:prose-dark max-w-none w-full">
           {children}
         </div>
 
-        <div className="w-full flex justify-center text-sm text-gray-600 dark:text-gray-300 mt-5 space-x-1">
+        <div className="w-full flex justify-center text-sm text-gray-600 dark:text-gray-300 mt-10 space-x-1">
           <a
             href={discussUrl(frontMatter.slug)}
             target="_blank"
