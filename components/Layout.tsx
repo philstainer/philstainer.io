@@ -19,7 +19,7 @@ export const Layout = ({children, ...customMeta}: Props): JSX.Element => {
   const router = useRouter()
 
   const meta: any = {
-    title: 'Phil Stainer – Developer, writer, creator.',
+    title: 'Phil Stainer – Curious Developer and creator.',
     description: `Full-stack developer and JavaScript enthusiast.`,
     image: 'https://philstainer.io/static/images/banner.png',
     type: 'website',
