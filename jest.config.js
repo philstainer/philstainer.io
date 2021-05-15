@@ -21,5 +21,6 @@ module.exports = {
     '@/components/(.*)': ['<rootDir>/components/$1'],
     '@/lib/(.*)': ['<rootDir>/lib/$1'],
     '@/styles/(.*)': ['<rootDir>/styles/$1'],
+    '@/utils/(.*)': ['<rootDir>/utils/$1'],
   },
 }
