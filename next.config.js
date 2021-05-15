@@ -4,4 +4,11 @@ module.exports = {
   },
   reactStrictMode: true,
   poweredByHeader: false,
+  webpack: (config, {dev, isServer}) => {
+    if (isServer) {
+      require('./utils/generate-sitemap')
+    }
+
+    return config
+  },
 }
