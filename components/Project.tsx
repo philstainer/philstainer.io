@@ -14,9 +14,9 @@ export const Project = ({
   tags,
 }: Props): JSX.Element => {
   return (
-    <div className="block mb-7 space-y-3">
+    <div className="block mb-7 space-y-2">
       <div className="flex justify-between items-center text-gray-900 dark:text-gray-100">
-        <h4 className="text-xl md:text-2xl font-bold tracking-tight">
+        <h4 className="text-xl md:text-2xl tracking-tight">
           <span>{title}</span>
         </h4>
       </div>
@@ -28,7 +28,7 @@ export const Project = ({
             <div
               key={tag}
               data-testid="tag"
-              className="text-white bg-green-500 dark:bg-green-600 border border-green-300 rounded-sm py-0.5 px-1"
+              className="text-xs text-green-800 dark:text-green-100 bg-green-100 dark:bg-green-800 rounded-full py-1 px-2.5"
             >
               {tag}
             </div>
@@ -47,7 +47,7 @@ export const Project = ({
           title="View Site"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-gray-200 transition p-2"
+          className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-gray-200 transition p-2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ export const Project = ({
             title="View Source Code"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-gray-200 transition p-2"
+            className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-gray-200 transition p-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

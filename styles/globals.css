@@ -13,13 +13,130 @@
     U+FEFF, U+FFFD;
 }
 
+::selection {
+  @apply text-gray-50 bg-indigo-500 dark:bg-indigo-700;
+}
+
 html {
   scroll-behavior: smooth;
-  font-size: 1.125rem;
+  @apply text-lg;
+}
+
+html.dark img {
+  @apply filter contrast-75;
 }
 
 #__next {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  @apply flex flex-col min-h-screen;
+}
+
+.prose pre {
+  @apply bg-gray-50 border border-gray-200 dark:border-gray-700 dark:bg-gray-800;
+}
+
+.prose code {
+  @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-md bg-gray-100 dark:bg-gray-800;
+}
+
+.prose img {
+  /* Don't apply styles to next/image */
+  @apply m-0;
+}
+
+.prose > :first-child {
+  /* Override removing top margin, causing layout shift */
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.token.punctuation {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.string,
+.token.attr-value,
+.token.regex,
+.token.class-name,
+.token.deleted {
+  @apply text-green-500;
+}
+
+.token.selector,
+.token.property,
+.token.char,
+.token.inserted {
+  @apply text-purple-500;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.important,
+.token.attr-name,
+.token.variable,
+.token.builtin,
+.language-css .token.string,
+.style .token.string {
+  @apply text-yellow-500;
+}
+
+.token.atrule,
+.token.tag,
+.token.known-class-name,
+.token.keyword {
+  @apply text-blue-500;
+}
+
+.token.function {
+  @apply text-red-500;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  @apply text-gray-800 dark:text-gray-50;
+}
+
+pre::-webkit-scrollbar {
+  @apply hidden;
+}
+
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.remark-code-title {
+  @apply text-gray-800 dark:text-gray-200 px-5 py-3 border border-b-0 border-gray-200 dark:border-gray-700 rounded-t bg-gray-200 dark:bg-gray-800 text-sm font-mono font-bold;
+}
+
+.remark-code-title + pre {
+  @apply mt-0 rounded-t-none;
+}
+
+.mdx-marker {
+  @apply block -mx-4 px-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-blue-500;
+}
+
+.fade-in {
+  animation: animation-fade-in 0.3s;
+}
+
+@keyframes animation-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
