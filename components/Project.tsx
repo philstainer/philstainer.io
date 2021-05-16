@@ -36,7 +36,7 @@ export const Project = ({
         </div>
       )}
 
-      <p className="font-light leading-5 text-gray-600 dark:text-gray-300">
+      <p className="leading-5 text-gray-600 dark:text-gray-300">
         {description}
       </p>
 

@@ -32,7 +32,7 @@ export const BlogLayout = ({children, frontMatter}: Props): JSX.Element => {
           {frontMatter.title}
         </h1>
 
-        <p className="text-sm font-light text-gray-600 dark:text-gray-300">
+        <p className="text-sm font-light text-gray-500 dark:text-gray-400 mb-5">
           {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')} -{' '}
           {frontMatter.readingTime.text}
         </p>

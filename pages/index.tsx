@@ -11,6 +11,7 @@ type Props = {
 
 export const Home = ({posts}: Props): JSX.Element => {
   const latestPosts = posts
+    .filter(post => Number(new Date()) >= Number(new Date(post.publishedAt)))
     .sort(
       (a, b) =>
         Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
