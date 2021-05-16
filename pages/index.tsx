@@ -71,11 +71,10 @@ export const Home = ({posts}: Props): JSX.Element => {
           />
 
           <Project
-            title="Easybank Landing Page"
-            description="Landing page built from given design."
-            href="https://easybank-landing-page-philstainer.vercel.app/"
-            source="https://github.com/PhilStainer/easybank-landing-page"
-            tags={['html', 'scss']}
+            title="Full stack shop"
+            description="Online store with login and checkout"
+            source="https://github.com/PhilStainer/fullstack-shop"
+            tags={['next.js', 'graphql', 'docker']}
           />
         </section>
       </div>
