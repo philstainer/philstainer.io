@@ -47,7 +47,7 @@ export const Pre = ({children, className, ...props}: Props): JSX.Element => {
             onClick={onClick}
             disabled={copied}
             className={classNames(
-              'hidden transition bg-transparent border rounded-md p-2 focus:outline-none fade-in group-hover:flex',
+              'hidden transition bg-transparent border rounded-md p-2 focus:outline-none group-hover:flex fade-in',
               {
                 'border-green-400': copied,
                 'hover:border-gray-500 dark:border-gray-700 dark:hover:border-gray-400 focus:ring-4 focus:ring-gray-200 focus:ring-opacity-50': !copied,
