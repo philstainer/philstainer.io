@@ -3,7 +3,6 @@ import {useRouter} from 'next/router'
 import {ReactNode} from 'react'
 
 import {Nav} from '@/components/Nav'
-import {ThemeButton} from '@/components/ThemeButton'
 import {Footer} from '@/components/Footer'
 
 type Props = {
@@ -52,7 +51,6 @@ export const Layout = ({children, ...customMeta}: Props): JSX.Element => {
         )}
       </Head>
 
-      <ThemeButton />
       <Nav />
 
       <main className="flex flex-col justify-center bg-white dark:bg-gray-900 px-6 mt-10 md:mt-20">

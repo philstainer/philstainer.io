@@ -47,57 +47,76 @@ html.dark img {
   margin-bottom: 1.25em !important;
 }
 
-.token.comment,
 .token.prolog,
 .token.doctype,
+.token.punctuation,
+.token.dom.variable,
 .token.cdata {
-  @apply text-gray-700 dark:text-gray-300;
+  @apply text-gray-600 dark:text-gray-100;
 }
 
-.token.punctuation {
-  @apply text-gray-700 dark:text-gray-300;
+.token.comment {
+  @apply text-gray-400 dark:text-gray-500;
 }
 
-.token.boolean,
-.token.number,
 .token.constant,
 .token.symbol,
-.token.string,
 .token.attr-value,
 .token.regex,
 .token.class-name,
+.token.tag,
 .token.deleted {
-  @apply text-green-500;
+  @apply text-green-500 dark:text-green-400;
+}
+
+.token.spread > .attr-value {
+  @apply text-gray-600 dark:text-gray-100;
 }
 
 .token.selector,
 .token.property,
 .token.char,
+.token.function,
+.token.method,
 .token.inserted {
-  @apply text-purple-500;
+  @apply text-purple-500 dark:text-purple-400;
 }
 
-.token.operator,
 .token.entity,
 .token.url,
 .token.important,
 .token.attr-name,
 .token.variable,
 .token.builtin,
+.token.maybe-class-name,
 .language-css .token.string,
 .style .token.string {
-  @apply text-yellow-500;
+  @apply text-yellow-500 dark:text-yellow-400;
 }
 
 .token.atrule,
-.token.tag,
-.token.known-class-name,
-.token.keyword {
-  @apply text-blue-500;
+.token.tag > .attr-name,
+.token.known-class-name {
+  @apply text-blue-500 dark:text-blue-400;
 }
 
-.token.function {
-  @apply text-red-500;
+.token.operator,
+.token.string,
+.token.tag > .punctuation,
+.token.tag > .attr-value,
+.token.property-access,
+.token.boolean,
+.token.number,
+.token.operator {
+  @apply text-blue-400 dark:text-blue-300;
+}
+
+.token.keyword {
+  @apply text-red-500 dark:text-red-400;
+}
+
+.token.method {
+  @apply text-purple-500 dark:text-purple-400;
 }
 
 code[class*='language-'],

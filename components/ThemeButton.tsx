@@ -14,7 +14,7 @@ export const ThemeButton = (): JSX.Element => {
     <button
       aria-label="Toggle Theme"
       type="button"
-      className="z-20 w-10 h-10 fixed top-4 left-6 bg-gray-300 text-gray-900 rounded-sm overflow-hidden outline-none focus:outline-none focus:ring-2 focus:ring-gray-800 md:w-16 md:h-16 md:-top-0 md:-left-0 md:rounded-br-full dark:bg-gray-600 dark:text-gray-200 dark:focus:text-white dark:focus:ring-gray-200"
+      className="z-20 w-10 h-10 bg-gray-300 text-gray-900 rounded-sm overflow-hidden outline-none focus:outline-none focus:ring-2 focus:ring-gray-800 md:rounded-br-full md:fixed md:w-16 md:h-16 md:-top-0 md:-left-0 md:rounded-br-full dark:bg-gray-600 dark:text-gray-200 dark:focus:text-white dark:focus:ring-gray-200"
       onClick={() => setTheme(isDarkMode ? 'light' : 'dark')}
     >
       <div className="relative h-full flex items-center justify-center rounded-sm md:rounded-br-full outline-none">
