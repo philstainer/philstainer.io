@@ -26,14 +26,11 @@ export const Pre = ({children, className, ...props}: Props): JSX.Element => {
   }
 
   return (
-    <div
-      className="relative group focus:outline-none"
-      data-testid="pre-container"
-    >
+    <div className="relative group">
       <pre
         {...props}
         ref={preRef}
-        className={classNames(className, 'flex focus:outline-none')}
+        className={classNames(className, 'focus:outline-none')}
       >
         <div className="absolute flex items-center space-x-2 top-0 right-0 m-2">
           <span

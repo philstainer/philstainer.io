@@ -15,7 +15,7 @@ export const Footer = (): JSX.Element => {
             title="Twitter"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex text-gray-900 dark:text-gray-100"
+            className="flex text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-300 transition-colors"
           >
             <svg
               fill="currentColor"
@@ -33,7 +33,7 @@ export const Footer = (): JSX.Element => {
             title="Github"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex text-gray-900 dark:text-gray-100"
+            className="flex text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-300 transition-colors"
           >
             <svg
               fill="currentColor"
