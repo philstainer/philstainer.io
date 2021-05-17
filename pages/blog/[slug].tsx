@@ -1,8 +1,9 @@
 import {BlogLayout} from '@/components/BlogLayout'
 import {MDXComponents} from '@/components/MDXComponents'
-import {BlogPost, getFileBySlug, getFiles} from '@/lib/mdx'
+import {getFileBySlug, getFiles} from '@/lib/mdx'
 import {GetStaticPathsResult, GetStaticPropsResult} from 'next'
 import {MDXRemote} from 'next-mdx-remote'
+import {BlogPost} from 'types/BlogPost'
 
 export const Blog = ({mdxSource, frontMatter}: BlogPost): JSX.Element => {
   return (

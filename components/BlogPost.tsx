@@ -1,7 +1,7 @@
-import {Post} from '@/lib/mdx'
 import Link from 'next/link'
 import format from 'date-fns/format'
 import parseISO from 'date-fns/parseISO'
+import {Post} from 'types/Post'
 
 export const BlogPost = ({
   title,

@@ -1,7 +1,8 @@
 import {BlogPost} from '@/components/BlogPost'
 import {Layout} from '@/components/Layout'
-import {getFilesMatter, Post} from '@/lib/mdx'
+import {getFilesMatter} from '@/lib/mdx'
 import {GetStaticProps} from 'next'
+import {Post} from 'types/Post'
 
 type Props = {
   posts: Post[]

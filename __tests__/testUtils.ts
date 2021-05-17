@@ -1,8 +1,8 @@
-import {ReactNode, ComponentType} from 'react'
+import {ComponentType} from 'react'
 import {render, RenderResult} from '@testing-library/react'
 
 type Props = {
-  children: ReactNode
+  children: JSX.Element
 }
 
 const Providers = ({children}: Props) => {

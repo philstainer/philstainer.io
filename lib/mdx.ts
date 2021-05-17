@@ -3,29 +3,15 @@ import path from 'path'
 import matter from 'gray-matter'
 import readingTime from 'reading-time'
 import {serialize} from 'next-mdx-remote/serialize'
-import {MDXRemoteSerializeResult} from 'next-mdx-remote/dist/types'
 import mdxPrism from 'mdx-prism'
+import {BlogPost} from 'types/BlogPost'
+import {Post} from 'types/Post'
 
 export const root = process.cwd()
 export const basePath = path.join(root, 'data')
 
-export type Post = {
-  title: string
-  publishedAt: string
-  summary: string
-  image: string
-  slug?: string
-  wordCount?: number
-  readingTime: any
-}
-
 export const getFiles = async (dir: string): Promise<string[]> =>
   fs.readdirSync(path.join(basePath, dir))
-
-export type BlogPost = {
-  mdxSource: MDXRemoteSerializeResult
-  frontMatter: Post
-}
 
 export const getFileBySlug = async (
   dir: string,
