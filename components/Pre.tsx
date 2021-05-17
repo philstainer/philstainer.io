@@ -32,7 +32,7 @@ export const Pre = ({children, className, ...props}: Props): JSX.Element => {
       <pre
         {...props}
         ref={preRef}
-        className={classNames(className, 'flex focus:outline-none')}
+        className={classNames(className, 'focus:outline-none')}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
