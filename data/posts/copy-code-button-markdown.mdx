@@ -1,5 +1,5 @@
 ---
-title: 'How I added copy code button to my blog posts'
+title: 'How to add a copy code button to your blog posts'
 publishedAt: '2021-05-20'
 summary: 'I recently decided to update my site and start a blog. I wanted a nice way of copying code snippets and this is what I came up with.'
 image: '/static/images/copy-code-button-markdown/banner.png'
@@ -13,7 +13,13 @@ image: '/static/images/copy-code-button-markdown/banner.png'
   priority
 />
 
-In this example I'm going to be using:
+I recently revamped my site and I was looking for a way how to do my own copy code button for code snippets. I wanted something clean, simple and provides user with feedback.
+
+After a bit of consulting the main man google, I could not find any good examples using a similar tech stack. So back to the drawing board.
+
+Then I realised that I could make my own custom pre component.
+
+In this example I am going to be using:
 
 - [Tailwind CSS](https://tailwindcss.com/) 
 - [Heroicons](https://heroicons.com/)
@@ -21,15 +27,9 @@ In this example I'm going to be using:
 
 [Here](https://github.com/vercel/next.js/tree/canary/examples/with-mdx-remote) is a good starting point if you would like to do the same.
 
-So I revamped my site and I was looking for a way how to do my own copy code button for code snippets. I wanted something clean, simple and provides user with feedback.
-
-After a bit of consulting the main man google, I couldn't find any good examples using a similar tech stack. So back to the drawing board.
-
-Then I realised that I could make my own custom pre component.
-
 ## Setup
 
-Lets start with this.
+Let's start with this.
 
 ```jsx:Pre.jsx
 export const Pre = ({children, ...props}) => {
@@ -62,7 +62,7 @@ export const Layout = ({mdxSource}) => {
 }
 ```
 
-Right now you wont notice any difference as we have only replicated the default behaviour.
+Right now, you won't notice any difference as we have only replicated the default behaviour.
 
 ## Implementation
 
@@ -73,7 +73,7 @@ We want the copy button to be top right even when the pre will overflow, so we w
    ...
 </div>
 ```
-Then create a div inside are pre and position that top right
+Then create a div inside our pre and position that top right
 
 ```jsx:Pre.jsx
 <div className="absolute flex items-center space-x-2 top-0 right-0 m-2">
@@ -100,7 +100,7 @@ Then create a div inside are pre and position that top right
 </div>
 ```
 
-Now lets add an `onClick={onClick}` event to the button and add some state to give the user feedback when clicked.
+So we can prove the user with some feedback lets add some state and add an `onClick={onClick}` event to the button.
 
 ```jsx:Pre.jsx
 const [copied, setCopied] = useState(false)
@@ -127,7 +127,7 @@ I manged to come up with a nice work around by using ref and innerText.
 
 First we need to create a ref `const preRef = useRef(null)` then hook that up to the pre element.
 
-Lets create are custom copy to clipboard function. I wanted to support newer `writeText` API and a fall back just in case it wasn't supported.
+Let's create our custom copy to clipboard function. I wanted to support newer `writeText` API and a fall back just in case it was not supported.
 
 ```tsx:copyToClipboard.ts
 export const copyToClipboard = (text) => {
@@ -158,7 +158,7 @@ export const copyToClipboard = (text) => {
 }
 ```
 
-Now lets add that to are onClick and make use of are preRef.
+Now let's add that to our onClick event.
 
 ```jsx:Pre.jsx
 const onClick = () => {
@@ -173,6 +173,6 @@ You can find my full code [here](https://github.com/PhilStainer/philstainer.io/b
 
 ## Conclusion
 
-You learned how to implement your own copy code button using MDXRemote and Tailwind.
+Creating your own copy code button is a great way to customize it and adds a better user experience. I hope with my examples above using MDXRemote and Tailwind, you can create something for your own blog.
 
-Cheers! 👋
+Happy coding! 👋
