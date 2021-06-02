@@ -10,7 +10,7 @@ const prettier = require('prettier')
     '!data/*.mdx',
     '!pages/_*.tsx',
     '!pages/api',
-    '!pages/404.tsx',
+    '!pages/404.tsx'
   ])
 
   const routes = pages
@@ -18,7 +18,7 @@ const prettier = require('prettier')
       const path = page
         .replace('pages', '')
         .replace('data', '')
-        .replace('.js', '')
+        .replace('.tsx', '')
         .replace('.mdx', '')
 
       const route = path === '/index' ? '' : path
@@ -39,7 +39,7 @@ const prettier = require('prettier')
     `
 
   const formatted = prettier.format(sitemap, {
-    parser: 'html',
+    parser: 'html'
   })
 
   fs.writeFileSync('public/sitemap.xml', formatted)
