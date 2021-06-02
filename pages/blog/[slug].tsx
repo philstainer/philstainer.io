@@ -14,15 +14,15 @@ export const Blog = ({mdxSource, frontMatter}: BlogPost): JSX.Element => {
 }
 
 export const getStaticPaths = async (): Promise<GetStaticPathsResult> => {
-  const posts = await getFiles('posts')
+  const posts = await getFiles('blog')
 
   return {
     paths: posts.map(post => ({
       params: {
-        slug: post.replace(/\.mdx/, ''),
-      },
+        slug: post.replace(/\.mdx/, '')
+      }
     })),
-    fallback: false,
+    fallback: false
   }
 }
 
@@ -33,9 +33,9 @@ type StaticProps = {
 }
 
 export const getStaticProps = async ({
-  params,
+  params
 }: StaticProps): Promise<GetStaticPropsResult<BlogPost>> => {
-  const post = await getFileBySlug('posts', params.slug)
+  const post = await getFileBySlug('blog', params.slug)
 
   return {props: post}
 }

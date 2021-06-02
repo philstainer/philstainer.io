@@ -36,7 +36,7 @@ export const Blog = ({posts}: Props): JSX.Element => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getFilesMatter('posts')
+  const posts = await getFilesMatter('blog')
 
   return {props: {posts}}
 }
